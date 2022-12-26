@@ -1,0 +1,32 @@
+button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: green;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 10px;
+}

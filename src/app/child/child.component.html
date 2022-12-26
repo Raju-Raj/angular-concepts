@@ -1,0 +1,9 @@
+<div style="border: 1px solid red;">
+    <h1>Child Comp</h1>
+    <ul *ngFor="let list of values">
+        <li>{{list.name}} & {{list.age}}</li>
+    </ul>
+
+    <input type="text" #newValue>
+    <button (click)="addValue(newValue.value)">Add</button>
+</div>

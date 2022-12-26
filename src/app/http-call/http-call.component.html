@@ -1,0 +1,27 @@
+
+<div>
+    <button (click)="getData()">GetData</button>
+</div>
+
+<div *ngIf="data">
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let dat of data">
+            <td>{{dat.id}}</td>
+            <td>{{dat.title}}</td>
+            <td>{{dat.price}}</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <button (click)="subscribe()">Observables</button>
+</div>
+
+<div>
+    <button (click)="unsubscribe()">UnSubscribe</button>
+</div>

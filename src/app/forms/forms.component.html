@@ -1,0 +1,63 @@
+
+<!-- ngModel -->
+<!-- <form action="">
+    <label for="">UserName:</label>
+    <input minlength="4" required="" type="text" class="form-control w-50 m-2" ngModel name="username" #un="ngModel">
+    <label for="">Password</label>
+    <input required="" type="text" class="form-control w-50 m-2" ngModel name="password" #pw="ngModel">
+    <button (click)="show(un,pw)" class="btn btn-primary">Click</button>
+</form> -->
+
+<!-- ngModelGroup -->
+
+<!-- <form action="">
+    <div ngModelGroup #group="ngModelGroup" >
+    <label for="">UserName:</label>
+    <input minlength="4" required="" type="text" class="form-control w-50 m-2" ngModel name="username" #un="ngModel">
+    <label for="">Password</label>
+    <input required="" type="text" class="form-control w-50 m-2" ngModel name="password" #pw="ngModel">
+    <button (click)="show(un,pw,group)" class="btn btn-primary">Click</button>
+    </div>
+</form>
+
+<div>
+    {{group.value | json}}
+</div>
+
+<div> 
+{{un.value | json}}
+</div>
+
+<div>
+    {{pw.value | json}}
+</div> -->
+
+<form action="">
+    <label for="">UserName:</label>
+    <input minlength="3" required="" type="text" class="form-control w-50 m-2" ngModel name="username" #un="ngModel">
+    <p class="err-msg" *ngIf="un.touched&&un.errors?.['required']">*User name is required</p>
+    <p class="err-msg" *ngIf="un.touched&&un.errors?.['minlength']">*User name contains minimum 3 char</p>
+    <label for="">Password</label>
+    <input minlength="8" required="" type="text" class="form-control w-50 m-2" ngModel name="password" #pw="ngModel">
+    <ng-container *ngIf="pw.touched">
+        <p class="err-msg" *ngIf="pw.errors?.['required']">*Password  is required</p>
+        <p class="err-msg" *ngIf="pw.errors?.['minlength']">*Password contains minimum 8 char</p>
+    </ng-container>
+    <button (click)="show(un,pw)" class="btn btn-primary">Click</button>
+</form>
+
+<form action="" #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+    Username:
+    <input type="text" ngModel name="username" #un="ngModel" class="form-control w-50 m-2">
+    Password:
+    <input type="text" ngModel name="password" #pw="ngModel" class="form-control w-50 m-2">
+    <button class="btn btn-primary m-2" type="submit">Submit</button>
+</form>
+
+<form action="" #reg="ngForm" >
+    Username:
+    <input type="text" ngModel name="username" #un="ngModel" class="form-control w-50 m-2">
+    Password:
+    <input type="text" ngModel name="password" #pw="ngModel" class="form-control w-50 m-2">
+    <button class="btn btn-primary m-2" (click)="shown(reg)">Click</button>
+</form>

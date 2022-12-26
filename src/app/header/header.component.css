@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background: gray;
+    padding: 10px;
+}
+
+li a{
+    text-decoration: none;
+}
+
+.active{
+    background-color: rgb(196, 103, 103);
+    color: white;
+    padding: 10px;
+}

@@ -1,0 +1,29 @@
+<!-- Two Way Binding -->
+<label for="">Enter Your Name :</label>
+<input type="text" [(ngModel)]=name/>
+<h1>Your Name Is : {{name}}</h1>
+
+
+
+<!-- if else condition directive -->
+<button (click)="toggle()">Toggle Button</button>
+<h1 *ngIf="btn">Show Hai</h1>
+<h1 *ngIf="age<=17 else elseBlock">This will print age will be 18 and greater than 18</h1>
+<ng-template #elseBlock>
+  <h1 >Else Block will Print</h1>
+</ng-template>
+
+
+<!-- switch case -->
+<div [ngSwitch]="color">
+  <h1 style="color: red;" *ngSwitchCase="'red'">Red Color</h1>
+  <h1 style="color: blue;" *ngSwitchCase="'blue'">Blue Color</h1>
+  <h1 style="color: green;" *ngSwitchCase="'green'">Green Color</h1>
+  <h1 *ngSwitchDefault>Default Color</h1>
+</div>
+
+<!-- fof loop -->
+<h1>List of Names</h1>
+<ul *ngFor="let name of names">
+  <li>{{name}}</li>
+</ul>

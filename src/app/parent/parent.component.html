@@ -1,0 +1,6 @@
+<h1>Parent Comp</h1>
+<app-child [values]="list" (newchildtopar)="addValues($event)" #child></app-child>
+<ul *ngFor="let val of values">
+    <li>{{val}}</li>
+</ul>
+<h1>{{child.message}}</h1>

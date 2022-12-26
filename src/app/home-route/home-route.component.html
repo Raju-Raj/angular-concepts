@@ -1,0 +1,7 @@
+<h1>Home Component</h1>
+<ul *ngFor="let mob of mobiles">
+    <li>{{mob}}</li>
+</ul>
+<button (click)="addmob()">Add</button>
+<a routerLink="/home/homechild">HomeChild</a>
+<router-outlet></router-outlet>
